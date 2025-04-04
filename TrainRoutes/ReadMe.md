@@ -7,10 +7,22 @@ This .NET console application finds train routes between towns given an input fi
 ## Design Decisions
 
 1. **Graph Representation**: The train routes are represented using an adjacency list, which is implemented as a dictionary of dictionaries. This allows efficient lookups and updates of routes and distances.
+
+   ![Graph Representation](Relevant Diagrams/graph_representation_diagram.png)
+
 2. **Algorithms**: 
    - **Route Distance Calculation**: Simple traversal of the adjacency list.
+
+     ![Route Distance Calculation](Relevant Diagrams/route_distance_calculation_diagram.png)
+
    - **Counting Trips**: Recursive depth-first search (DFS) with constraints on stops or distance.
+
+     ![Counting Trips](Relevant Diagrams/counting_trips_diagram.png)
+
    - **Shortest Route**: Dijkstra's algorithm for finding the shortest path in a weighted graph.
+
+     ![Shortest Route](Relevant Diagrams/shortest_route_diagram.png)
+
 3. **Unit Tests**: The `GraphTests` class uses the xUnit framework to validate the functionality of the `Graph` class. Each test corresponds to one of the specified requirements.
 
 ## Usage
@@ -23,4 +35,3 @@ This .NET console application finds train routes between towns given an input fi
 The unit tests are implemented in the `GraphTests.cs` file. To run the tests, use the xUnit test runner.
 
 ## Example Input File
-
